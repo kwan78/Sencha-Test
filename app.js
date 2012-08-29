@@ -1,11 +1,13 @@
 Ext.application({
+    controllers: ["Main", "LoginController"],
+
     name: 'MyApp',
 
     requires: [
         'Ext.MessageBox'
     ],
 
-    views: ['Main', 'Home', 'Contact'],
+    views: ['Main', 'Home', 'Contact', 'Blog', 'LoginFormView'],
 
     icon: {
         '57': 'resources/icons/Icon.png',

@@ -2,9 +2,15 @@ Ext.define("MyApp.view.Contact",{
 	extend: 'Ext.form.Panel',
 	xtype: 'contactform',
 
+	requires: [
+		'Ext.form.FieldSet',
+		'Ext.field.Email'
+		],
+
 	config: {
 		title: 'Contact',
 		iconCls: 'user',
+		url: 'contact.php',
 
 		items: [
 		{
@@ -27,9 +33,18 @@ Ext.define("MyApp.view.Contact",{
 				xtype: 'textareafield',
 				name: 'message',
 				label: 'Message'
-			}
-		]
-	}]
+				}
+			]
+	},
+	{
+		xtype: 'button',
+		text: 'Send',
+		ui: 'confirm',
+		handler: function() {
+			this.up('contactform').submit()
+		}
+	}
+	]
 
 }
 }

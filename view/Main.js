@@ -13,7 +13,13 @@ Ext.define("MyApp.view.Main", {
             xtype: 'homepanel'
         },
         {
+            xtype: 'blog'
+        },
+        {
             xtype: 'contactform'
+        },
+        {
+            xtype: 'LoginFormView'
         }
             
             
